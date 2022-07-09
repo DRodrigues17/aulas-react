@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20% 20% 0px;
+}
+
+.titulo {
+  font-family: sans-serif;
+}
+
+.conteudo {
+  width: 80%;
+}
+
+.tarefa_box {
+  display: flex;
+  flex-direction: column;
+}
+
+#tarefa {
+  padding: 0 10px;

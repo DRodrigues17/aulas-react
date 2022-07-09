@@ -1,5 +1,3 @@
-app.js
-
 import "./styles.css";
 import { useState } from "react";
 
@@ -14,7 +12,9 @@ export default function App() {
     setTarefas(novoArray);
     setInputTarefa([""]);
   };
-  const excluirTarefa = () => {};
+  const excluirTarefa = (index) => {
+    setTarefas(tarefas.filter((_, talDoIndex) => talDoIndex !== index));
+  };
 
   return (
     <div className="container">
@@ -45,10 +45,13 @@ export default function App() {
           </form>
           <section>
             <ul>
-              {tarefas.map((tarefa) => (
+              {tarefas.map((tarefa, index) => (
                 <li>
                   <input disabled className="tarefa_conteudo" value={tarefa} />
-                  <button className="btn botao_excluir" onClick={excluirTarefa}>
+                  <button
+                    className="btn botao_excluir"
+                    onClick={excluirTarefa(index)}
+                  >
                     excluir
                   </button>
                 </li>

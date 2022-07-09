@@ -1,0 +1,22 @@
+URL em questão: 
+https://
+www.auxiliadorapredial.com.br
+/alugar/residencial/rs+porto-alegre+cidade-baixa?
+quartos=2&sem-fiador-ou-garantias=true
+
+ANATOMIA
+
+Protocolo:
+https
+
+Dominimo:
+www.auxiliadorapredial.com.br
+
+Path:
+/alugar
+    /residencial
+        /rs+porto-alegre+cidade-baixa
+
+Querys:
+quartos=2
+sem-fiador-ou-garantias=true
