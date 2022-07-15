@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./exercicio1.8.2.css";
 import { useState } from "react";
 
 export default function App() {
@@ -62,82 +62,4 @@ export default function App() {
       </div>
     </div>
   );
-}
-
-styles.css
-
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 20% 20% 0px;
-}
-
-.titulo {
-  font-family: sans-serif;
-}
-
-.conteudo {
-  width: 80%;
-}
-
-.tarefa_box {
-  display: flex;
-  flex-direction: column;
-}
-
-#tarefa {
-  padding: 0 10px;
-  border: 1px solid gray;
-  border-radius: 5px;
-}
-
-.tarefa_conteudo {
-  padding: 0 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-.btn {
-  background-color: transparent;
-  margin-left: 17px;
-  padding: 10px;
-  border-radius: 5px;
-  min-width: 100px;
-}
-
-.botao_adcionar {
-  border: 0.5px solid blue;
-}
-
-.botao_excluir {
-  border: 0.5px solid red;
-}
-
-.botao_adcionar:hover {
-  background-color: blue;
-  color: white;
-  border: 0.5px solid black;
-  transition: 1s;
-}
-
-.botao_excluir:hover {
-  background-color: red;
-  color: white;
-  border: 0.5px solid black;
-  transition: 1s;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  padding: flex;
-  gap: 10px;
-}
-
-section {
-  margin-top: 10px;
 }
