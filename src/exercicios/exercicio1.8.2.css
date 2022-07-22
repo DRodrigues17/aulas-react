@@ -1,7 +1,6 @@
 .container {
   display: flex;
-  flex-direction: column;
-  padding: 10px 20% 20% 0px;
+  justify-content: center;
 }
 
 .titulo {
@@ -12,51 +11,51 @@
   width: 80%;
 }
 
+.btn {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.btn_adicionar {
+  border: 0.5px solid blue;
+}
+
+.btn_excluir {
+  border: 0.5px solid red;
+}
+
+.btn_adicionar:hover {
+  color: white;
+  background-color: blue;
+  border: 0.5px solid black;
+  transition: 1s;
+}
+
+.btn_excluir:hover {
+  color: white;
+  background-color: red;
+  border: 0.5px solid black;
+  transition: 1s;
+}
+
 .tarefa_box {
   display: flex;
   flex-direction: column;
 }
 
 #tarefa {
-  padding: 0 10px;
-  border: 1px solid gray;
   border-radius: 5px;
+  border: 1px solid gray;
+  padding: 0 10px;
 }
 
 .tarefa_conteudo {
+  border-radius: 5px;
+  border: 1px solid gray;
   padding: 0 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-.btn {
-  background-color: transparent;
-  margin-left: 17px;
-  padding: 10px;
-  border-radius: 5px;
-  min-width: 100px;
-}
-
-.botao_adcionar {
-  border: 0.5px solid blue;
-}
-
-.botao_excluir {
-  border: 0.5px solid red;
-}
-
-.botao_adcionar:hover {
-  background-color: blue;
-  color: white;
-  border: 0.5px solid black;
-  transition: 1s;
-}
-
-.botao_excluir:hover {
-  background-color: red;
-  color: white;
-  border: 0.5px solid black;
-  transition: 1s;
 }
 
 ul {
@@ -66,7 +65,7 @@ ul {
 }
 
 li {
-  padding: flex;
+  display: flex;
   gap: 10px;
 }
 

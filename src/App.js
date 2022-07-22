@@ -1,6 +1,4 @@
-// import "./styles.css";
-import "./exercicios/exercicio1.8.2.css";
-import { Consulta } from "./exercicios/exercicio1.8.2.adaptado";
+import { Consulta } from "./exercicios/exercicio1.8.2.adaptado.tsx";
 
 export default function App() {
   return (
