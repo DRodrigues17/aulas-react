@@ -14,17 +14,31 @@ export default function App() {
     gap: 10
   });
 
-  const handleOnClickAdicionar = () => {
-    const novoArray = tarefas;
-    novoArray.push(inputTarefa);
-    setTarefas([...novoArray]);
-    setInputTarefa("");
+  const adcionar = async (name) => {
+    const url = "https://68jb68bukl.execute-api.sa-east-1.amazonaws.com/tasks";
+    const resultado = await axios.post(url, {
+      params: {
+        description: name,
+        user: "Daniel"
+      }
+    });
+    buscarTodas().then((retornoTarefas) => {
+      setTarefas(retornoTarefas);
+    });
   };
 
   const buscarTodas = async () => {
     const url = "https://68jb68bukl.execute-api.sa-east-1.amazonaws.com/tasks";
-    const resultado = await axios.get(url, { params: { user: "Melissa" } });
+    const resultado = await axios.get(url, { params: { user: "Daniel" } });
     return resultado.data.items;
+  };
+
+  const excluir = async (id) => {
+    const url = `https://68jb68bukl.execute-api.sa-east-1.amazonaws.com/tasks/${id}`;
+    const resultado = await axios.delete(url);
+    buscarTodas().then((retornoTarefas) => {
+      setTarefas(retornoTarefas);
+    });
   };
 
   React.useEffect(() => {
@@ -32,10 +46,6 @@ export default function App() {
       setTarefas(retornoTarefas);
     });
   }, []);
-
-  const handleOnClick = (index) => {
-    console.log(index);
-  };
 
   return (
     <div className="container">
@@ -55,7 +65,7 @@ export default function App() {
                 />
                 <button
                   className="btn btn_adicionar"
-                  onClick={handleOnClickAdicionar}
+                  onClick={() => adcionar(tarefa.name)}
                 >
                   Adicionar
                 </button>
@@ -69,11 +79,11 @@ export default function App() {
                   <input
                     className="tarefa_conteudo"
                     disabled
-                    value={tarefa.deion}
+                    value={tarefa.description}
                   />
                   <button
                     className="btn btn_excluir"
-                    onClick={() => handleOnClick(index)}
+                    onClick={() => excluir(tarefa.id)}
                   >
                     Excluir
                   </button>
