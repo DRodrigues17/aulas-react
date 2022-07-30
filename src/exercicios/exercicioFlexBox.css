@@ -1,0 +1,33 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+h2 {
+  color: white;
+}
+
+form {
+  padding: 5px;
+}
+
+input,
+button {
+  width: 100%;
+}
+
+.img {
+  width: 100px;
+  height: 50px;
+}
+
+.main-content {
+  baclground-color: black;
+  height: 100vh;
+}
