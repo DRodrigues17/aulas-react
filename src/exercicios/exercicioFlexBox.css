@@ -7,6 +7,7 @@ html,
 body {
   padding: 0px;
   margin: 0px;
+  background-color: black;
 }
 
 h2 {
@@ -15,19 +16,56 @@ h2 {
 
 form {
   padding: 5px;
+  /* display: flex;
+  flex-direction: column;
+  border-radius: 5px; */
 }
 
 input,
 button {
   width: 100%;
+  border: 0px;
+  background-color: gray;
 }
 
-.img {
+h3 {
+  color: white;
+}
+
+button {
+  background-color: #e4141e;
+}
+
+img {
   width: 100px;
   height: 50px;
 }
 
 .main-content {
-  baclground-color: black;
+  /* background-color: black; */
   height: 100vh;
+  width: 100vw;
+  padding: 10px;
+}
+
+.loginBody {
+  max-width: 400px;
+  border: 1px solid white;
+}
+
+@media screen and (min-width: 350px) {
+  .loginBody {
+    margin: 0 auto;
+    height: 100vh;
+  }
+  html,
+  body {
+    background-image: url("https://miro.medium.com/max/1400/1*oiWWvBYf9VgvWR55t7_cRA.jpeg");
+    background-size: cover;
+    background-color: transparent;
+  }
+
+  .main-content {
+    background-color: transparent;
+  }
 }
