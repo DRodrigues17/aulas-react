@@ -1,4 +1,4 @@
-import "./exercicioFlexBox.css";
+import "./exemplonetflix.css";
 
 export default function App() {
   return (
